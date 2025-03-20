@@ -1,0 +1,60 @@
+{
+  "header": {
+    "home": "Inicio",
+    "aboutUs": "Nosotros",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Soluciones Integrales para Tratamiento de Agua",
+    "subtitle": "Expertos en sistemas de riego, calentadores y equipos para piscinas",
+    "cta": "Contáctanos"
+  },
+  "about": {
+    "title": "BACO Ingeniería",
+    "description": "Somos una empresa especializada en el manejo de plantas de tratamiento de agua, sistemas de riego, calentadores de agua y equipos para piscina. Con más de 15 años de experiencia, brindamos soluciones de alta calidad para hogares y empresas.",
+    "mission": "Nuestra misión es proporcionar tecnologías eficientes y sostenibles para el manejo del agua.",
+    "values": "Innovación, Calidad y Compromiso"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "treatmentPlants": {
+      "title": "Plantas de Tratamiento",
+      "description": "Diseño, instalación y mantenimiento de plantas para tratamiento de agua residual y potable."
+    },
+    "irrigationSystems": {
+      "title": "Sistemas de Riego",
+      "description": "Soluciones eficientes para riego de jardines, cultivos y áreas verdes."
+    },
+    "waterHeaters": {
+      "title": "Calentadores de Agua",
+      "description": "Instalación y mantenimiento de calentadores eficientes para hogares y negocios."
+    },
+    "poolEquipment": {
+      "title": "Equipos para Piscina",
+      "description": "Todo lo necesario para mantener su piscina en óptimas condiciones."
+    }
+  },
+  "callToAction": {
+    "title": "¿Necesitas una solución para tu proyecto?",
+    "description": "Contáctanos hoy mismo y recibe asesoría personalizada.",
+    "button": "Solicitar Información"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "subject": "Asunto",
+    "send": "Enviar",
+    "address": "Dirección",
+    "phoneNumber": "Teléfono",
+    "emailAddress": "Correo Electrónico"
+  },
+  "footer": {
+    "rights": "© 2023 BACO Ingeniería. Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos y Condiciones"
+  }
+} 

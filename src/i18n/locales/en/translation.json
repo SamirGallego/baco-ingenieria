@@ -1,0 +1,60 @@
+{
+  "header": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Comprehensive Water Treatment Solutions",
+    "subtitle": "Experts in irrigation systems, water heaters, and pool equipment",
+    "cta": "Contact Us"
+  },
+  "about": {
+    "title": "BACO Engineering",
+    "description": "We are a company specialized in water treatment plants, irrigation systems, water heaters, and pool equipment. With over 15 years of experience, we provide high-quality solutions for homes and businesses.",
+    "mission": "Our mission is to provide efficient and sustainable technologies for water management.",
+    "values": "Innovation, Quality, and Commitment"
+  },
+  "services": {
+    "title": "Our Services",
+    "treatmentPlants": {
+      "title": "Treatment Plants",
+      "description": "Design, installation, and maintenance of waste and potable water treatment plants."
+    },
+    "irrigationSystems": {
+      "title": "Irrigation Systems",
+      "description": "Efficient solutions for garden, crop, and green area irrigation."
+    },
+    "waterHeaters": {
+      "title": "Water Heaters",
+      "description": "Installation and maintenance of efficient heaters for homes and businesses."
+    },
+    "poolEquipment": {
+      "title": "Pool Equipment",
+      "description": "Everything needed to keep your pool in optimal condition."
+    }
+  },
+  "callToAction": {
+    "title": "Need a solution for your project?",
+    "description": "Contact us today and receive personalized advice.",
+    "button": "Request Information"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "subject": "Subject",
+    "send": "Send",
+    "address": "Address",
+    "phoneNumber": "Phone Number",
+    "emailAddress": "Email Address"
+  },
+  "footer": {
+    "rights": "© 2023 BACO Engineering. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  }
+} 
