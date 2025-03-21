@@ -11,6 +11,7 @@ import CallToAction from './components/CallToAction';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import LanguageSwitcher from './components/LanguageSwitcher';
+import WhatsAppButton from './components/WhatsAppButton';
 
 const theme = {
   colors: {
@@ -62,6 +63,10 @@ function App() {
             <Contact />
           </main>
           <Footer />
+          <WhatsAppButton 
+            phoneNumber="5212345678" 
+            message="Hola, estoy interesado en sus servicios de ingeniería. ¿Podría proporcionarme más información?"
+          />
         </div>
       </ThemeProvider>
     </Router>

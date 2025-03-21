@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
+import logoB from '../assets/logos/svgs/Bwhite.svg';
+import logoT from '../assets/logos/svgs/Twhite.svg';
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -19,12 +21,26 @@ const HeaderContainer = styled.header`
 `;
 
 const Logo = styled.div`
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-light);
+  display: flex;
+  align-items: center;
   
-  span {
-    color: var(--color-accent);
+  .logo-b {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo-t {
+    height: 30px;
+  }
+  
+  @media (max-width: 576px) {
+    .logo-b {
+      height: 35px;
+    }
+    
+    .logo-t {
+      height: 25px;
+    }
   }
 `;
 
@@ -135,7 +151,8 @@ const Header = () => {
   return (
     <HeaderContainer scrolled={scrolled}>
       <Logo>
-        BACO <span>Ingeniería</span>
+        <img src={logoB} alt="BACO Logo" className="logo-b" />
+        <img src={logoT} alt="BACO Ingeniería" className="logo-t" />
       </Logo>
       
       <NavLinks>

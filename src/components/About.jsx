@@ -4,9 +4,11 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 const AboutSection = styled.section`
-  padding: 120px 5%;
+  padding: 120px 5% 120px;
   background-color: var(--color-light);
   position: relative;
+  margin-top: -1px; /* Asegura que no haya espacio entre las secciones */
+  box-shadow: 0 -5px 30px rgba(0,0,0,0.03); /* Sombra sutil para mejorar la transición */
 `;
 
 const AboutContainer = styled.div`
