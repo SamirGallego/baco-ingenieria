@@ -10,14 +10,14 @@ const HeaderContainer = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  background-color: ${({ scrolled }) => scrolled ? 'var(--color-primary)' : 'transparent'};
+  background-color: ${({ $scrolled }) => $scrolled ? 'var(--color-primary)' : 'transparent'};
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
   z-index: 1000;
   transition: background-color var(--transition-medium);
-  box-shadow: ${({ scrolled }) => scrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none'};
+  box-shadow: ${({ $scrolled }) => $scrolled ? '0 2px 10px rgba(0, 0, 0, 0.1)' : 'none'};
 `;
 
 const Logo = styled.div`
@@ -25,12 +25,15 @@ const Logo = styled.div`
   align-items: center;
   
   .logo-b {
-    height: 40px;
+    height: 60px;
     margin-right: 10px;
+    padding: auto;
   }
   
   .logo-t {
-    height: 30px;
+    margin-left: 10px;
+    height: 50px;
+    padding: auto;
   }
   
   @media (max-width: 576px) {
@@ -39,7 +42,7 @@ const Logo = styled.div`
     }
     
     .logo-t {
-      height: 25px;
+      height: 35px;
     }
   }
 `;
@@ -149,7 +152,7 @@ const Header = () => {
   };
 
   return (
-    <HeaderContainer scrolled={scrolled}>
+    <HeaderContainer $scrolled={scrolled}>
       <Logo>
         <img src={logoB} alt="BACO Logo" className="logo-b" />
         <img src={logoT} alt="BACO Ingeniería" className="logo-t" />

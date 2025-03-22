@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import logoB from '../assets/logos/svgs/Bwhite.svg';
+import logoT from '../assets/logos/svgs/Twhite.svg';
 
 const FooterSection = styled.footer`
   background-color: var(--color-primary);
@@ -31,12 +33,32 @@ const FooterContent = styled.div`
 const FooterColumn = styled(motion.div)``;
 
 const FooterLogo = styled.div`
-  font-size: 1.8rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
   
-  span {
-    color: var(--color-accent);
+  .logo-b {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-t {
+    width: 180px;
+    height: auto;
+    transition: transform 0.3s ease;
+    margin-top: 5px;
+  }
+  
+  &:hover {
+    .logo-b {
+      transform: rotate(5deg);
+    }
+    
+    .logo-t {
+      transform: translateX(5px);
+    }
   }
 `;
 
@@ -153,7 +175,8 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <FooterLogo>
-              BACO <span>Ingeniería</span>
+              <img src={logoB} alt="BACO Logo" className="logo-b" />
+              <img src={logoT} alt="BACO Ingeniería" className="logo-t" />
             </FooterLogo>
             <FooterText>
               Soluciones de ingeniería especializadas en sistemas de tratamiento de agua, riego, calentadores y equipos para piscina.

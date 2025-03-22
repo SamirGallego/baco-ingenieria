@@ -2,53 +2,66 @@ import React from 'react';
 import styled from 'styled-components';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { FaFileDownload } from 'react-icons/fa';
 
 const CTASection = styled.section`
   padding: 100px 5%;
-  background: url('/images/cta-background.jpg') no-repeat center center;
-  background-size: cover;
+  background: var(--color-light);
   position: relative;
+  overflow: hidden;
+`;
+
+const Container = styled.div`
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+`;
+
+const FloatingCard = styled(motion.div)`
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
   
   &:before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(12, 60, 89, 0.85);
+    width: 100%;
+    height: 5px;
+    background: var(--color-accent);
   }
 `;
 
-const Container = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-`;
-
 const CTATitle = styled(motion.h2)`
-  font-size: 2.8rem;
-  color: var(--color-light);
+  font-size: 2.5rem;
+  color: var(--color-primary);
   margin-bottom: 1.5rem;
   
   @media (max-width: 768px) {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 `;
 
 const CTADescription = styled(motion.p)`
   font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 3rem;
+  color: var(--color-text);
+  margin-bottom: 2.5rem;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 `;
 
 const CTAButton = styled(motion.a)`
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   background-color: var(--color-accent);
   color: var(--color-light);
   padding: 1rem 2.5rem;
@@ -62,6 +75,20 @@ const CTAButton = styled(motion.a)`
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(242, 76, 61, 0.5);
   }
+  
+  svg {
+    font-size: 1.3rem;
+  }
+`;
+
+const IconContainer = styled.div`
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  opacity: 0.1;
+  font-size: 12rem;
+  color: var(--color-primary);
+  transform: rotate(-15deg);
 `;
 
 const CallToAction = () => {
@@ -70,35 +97,48 @@ const CallToAction = () => {
   return (
     <CTASection>
       <Container>
-        <CTATitle
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
+        <FloatingCard
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          {t('callToAction.title')}
-        </CTATitle>
-        
-        <CTADescription
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-        >
-          {t('callToAction.description')}
-        </CTADescription>
-        
-        <CTAButton
-          href="#contact"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
-          {t('callToAction.button')}
-        </CTAButton>
+          <IconContainer>
+            <FaFileDownload />
+          </IconContainer>
+          
+          <CTATitle
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            {t('callToAction.title', 'Descarga nuestro catálogo')}
+          </CTATitle>
+          
+          <CTADescription
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            {t('callToAction.description', 'Conoce todos nuestros productos y servicios de ingeniería en un solo documento. Descarga ahora nuestro catálogo completo.')}
+          </CTADescription>
+          
+          <CTAButton
+            href="/files/catalogo-baco-ingenieria.pdf"
+            download
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <FaFileDownload />
+            {t('callToAction.button', 'Descargar Catálogo')}
+          </CTAButton>
+        </FloatingCard>
       </Container>
     </CTASection>
   );

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 const ContactSection = styled.section`
-  padding: 120px 5%;
+  padding: 20px 5% 120px;
   background-color: var(--color-light);
 `;
 

@@ -12,9 +12,16 @@
   },
   "about": {
     "title": "BACO Engineering",
-    "description": "We are a company specialized in water treatment plants, irrigation systems, water heaters, and pool equipment. With over 15 years of experience, we provide high-quality solutions for homes and businesses.",
-    "mission": "Our mission is to provide efficient and sustainable technologies for water management.",
-    "values": "Innovation, Quality, and Commitment"
+    "description": "BACO INGENIERÍA S.A.S is the result of years of experience, teamwork, and the dedication of outstanding professionals who have left their mark on the industry. Since 2017, our leadership has been driving various projects, laying the foundation for an engineering company committed to innovation and excellence. <br> In 2023, we officially launched operations to provide technical and technological solutions in pumping systems, water treatment, pools and spas, sanitary hot water, and irrigation. We specialize in serving the residential, commercial, and industrial sectors, ensuring efficiency, quality, and a sustainable approach in every project.",
+    "missionTitle": "Our Mission",
+    "mission": "Our mission is to be a benchmark in hydraulic and thermal engineering, delivering advanced solutions that optimize water usage and contribute to sustainable development.",
+    "values": "Innovation, Quality, and Commitment",
+    "stats": {
+      "yearsExperience": "Years of Experience",
+      "projectsCompleted": "Projects Completed",
+      "clientsServed": "Satisfied Clients",
+      "satisfactionRate": "Satisfaction Rate"
+    }
   },
   "services": {
     "title": "Our Services",
@@ -36,9 +43,9 @@
     }
   },
   "callToAction": {
-    "title": "Need a solution for your project?",
-    "description": "Contact us today and receive personalized advice.",
-    "button": "Request Information"
+    "title": "Download our complete catalog",
+    "description": "Discover all our engineering products and services in a single document. Download our complete catalog now and explore the solutions we can offer for your project.",
+    "button": "Download Catalog"
   },
   "contact": {
     "title": "Contact Us",
@@ -56,5 +63,9 @@
     "rights": "© 2023 BACO Engineering. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms and Conditions"
+  },
+  "common": {
+    "readMore": "Read More",
+    "readLess": "Read Less"
   }
 } 

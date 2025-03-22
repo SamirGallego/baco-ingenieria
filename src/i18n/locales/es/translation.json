@@ -12,9 +12,16 @@
   },
   "about": {
     "title": "BACO Ingeniería",
-    "description": "Somos una empresa especializada en el manejo de plantas de tratamiento de agua, sistemas de riego, calentadores de agua y equipos para piscina. Con más de 15 años de experiencia, brindamos soluciones de alta calidad para hogares y empresas.",
-    "mission": "Nuestra misión es proporcionar tecnologías eficientes y sostenibles para el manejo del agua.",
-    "values": "Innovación, Calidad y Compromiso"
+    "description": "BACO INGENIERÍA S.A.S es el resultado de años de experiencia, trabajo en equipo y el esfuerzo de grandes profesionales que han dejado su huella en la industria. Desde 2017, nuestra dirección ha liderado diversos proyectos, construyendo las bases de una empresa de ingeniería comprometida con la innovación y la excelencia. <br> En 2023, iniciamos oficialmente nuestras operaciones con el propósito de ofrecer soluciones técnicas y tecnológicas en las áreas de bombeo, tratamiento de agua, piscinas y spas, agua caliente sanitaria y riego. Nos especializamos en atender las necesidades de los sectores residencial, comercial e industrial, garantizando eficiencia, calidad y un enfoque sostenible en cada proyecto.",
+    "missionTitle": "Nuestra Misión",
+    "mission": "Nuestra misión es ser un referente en ingeniería hidráulica y térmica, aportando soluciones avanzadas que optimicen el uso del agua y contribuyan al desarrollo sostenible.",
+    "values": "Innovación, Calidad y Compromiso",
+    "stats": {
+      "yearsExperience": "Años de Experiencia",
+      "projectsCompleted": "Proyectos Completados",
+      "clientsServed": "Clientes Satisfechos",
+      "satisfactionRate": "Índice de Satisfacción"
+    }
   },
   "services": {
     "title": "Nuestros Servicios",
@@ -36,9 +43,9 @@
     }
   },
   "callToAction": {
-    "title": "¿Necesitas una solución para tu proyecto?",
-    "description": "Contáctanos hoy mismo y recibe asesoría personalizada.",
-    "button": "Solicitar Información"
+    "title": "Descarga nuestro catálogo completo",
+    "description": "Conoce todos nuestros productos y servicios de ingeniería en un solo documento. Descarga ahora nuestro catálogo completo y descubre las soluciones que podemos ofrecer para tu proyecto.",
+    "button": "Descargar Catálogo"
   },
   "contact": {
     "title": "Contáctanos",
@@ -56,5 +63,9 @@
     "rights": "© 2023 BACO Ingeniería. Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
     "terms": "Términos y Condiciones"
+  },
+  "common": {
+    "readMore": "Ver Más",
+    "readLess": "Ver Menos"
   }
 } 

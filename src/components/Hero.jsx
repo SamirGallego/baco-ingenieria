@@ -107,8 +107,8 @@ const WaveWrapper = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
-  bottom: ${props => props.position || 0}px;
-  opacity: ${props => props.opacity || 1};
+  bottom: ${props => props.$position || 0}px;
+  opacity: ${props => props.$opacity || 1};
 `;
 
 const SlideIndicators = styled.div`
@@ -125,7 +125,7 @@ const SlideIndicator = styled.button`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, ${props => props.active ? '1' : '0.5'});
+  background-color: rgba(255, 255, 255, ${props => props.$active ? '1' : '0.5'});
   border: none;
   padding: 0;
   cursor: pointer;
@@ -136,41 +136,10 @@ const SlideIndicator = styled.button`
   }
 `;
 
-const SlideArrow = styled.button`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  ${props => props.direction === 'left' ? 'left: 20px;' : 'right: 20px;'}
-  background-color: rgba(0, 0, 0, 0.3);
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-  font-size: 1.2rem;
-  
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  @media (max-width: 768px) {
-    width: 35px;
-    height: 35px;
-    ${props => props.direction === 'left' ? 'left: 10px;' : 'right: 10px;'}
-  }
-`;
-
 const Hero = () => {
   const { t } = useTranslation();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [intervalId, setIntervalId] = useState(null);
-  const [imageStatus, setImageStatus] = useState("cargando");
   
   // Rutas correctas a las imágenes en public/images/hero
   const backgroundImages = [
@@ -206,46 +175,8 @@ const Hero = () => {
     resetTimer();
   };
   
-  const goToPrevious = () => {
-    setCurrentImageIndex((prevIndex) => 
-      prevIndex === 0 ? backgroundImages.length - 1 : prevIndex - 1
-    );
-    resetTimer();
-  };
-  
-  const goToNext = () => {
-    setCurrentImageIndex((prevIndex) => 
-      (prevIndex + 1) % backgroundImages.length
-    );
-    resetTimer();
-  };
-  
-  const handleImageLoad = () => {
-    setImageStatus("cargada");
-  };
-
-  const handleImageError = () => {
-    setImageStatus("error");
-  };
-  
   return (
     <HeroSection id="home">
-      {/* Panel de depuración - quitar en producción */}
-      <div style={{
-        position: 'absolute',
-        top: '100px',
-        left: '20px',
-        zIndex: 1000,
-        background: 'rgba(0,0,0,0.7)',
-        color: 'white',
-        padding: '10px',
-        borderRadius: '4px',
-        fontSize: '14px'
-      }}>
-        Imagen: {backgroundImages[currentImageIndex]}<br/>
-        Estado: {imageStatus}
-      </div>
-      
       <BackgroundContainer>
         <AnimatePresence mode="wait">
           <BackgroundImage
@@ -254,21 +185,11 @@ const Hero = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            onLoad={handleImageLoad}
-            onError={handleImageError}
+            transition={{ duration: 2 }}
           />
         </AnimatePresence>
         <BackgroundOverlay />
       </BackgroundContainer>
-      
-      <SlideArrow direction="left" onClick={goToPrevious}>
-        <i className="fas fa-chevron-left"></i>
-      </SlideArrow>
-      
-      <SlideArrow direction="right" onClick={goToNext}>
-        <i className="fas fa-chevron-right"></i>
-      </SlideArrow>
       
       <HeroContent>
         <HeroTitle
@@ -303,7 +224,7 @@ const Hero = () => {
         {backgroundImages.map((_, index) => (
           <SlideIndicator 
             key={index} 
-            active={index === currentImageIndex}
+            $active={index === currentImageIndex}
             onClick={() => handleIndicatorClick(index)}
           />
         ))}
@@ -311,7 +232,7 @@ const Hero = () => {
       
       <WavesContainer>
         {/* Tercera onda - sólida en frente (abajo) */}
-        <WaveWrapper position={0} opacity={1}>
+        <WaveWrapper $position={0} $opacity={1}>
           <Wave 
             fill="var(--color-light)"
             paused={false}
@@ -326,7 +247,7 @@ const Hero = () => {
         </WaveWrapper>
         
         {/* Segunda onda - ligeramente más pequeña (en medio) */}
-        <WaveWrapper position={15} opacity={0.5}>
+        <WaveWrapper $position={15} $opacity={0.5}>
           <Wave 
             fill="url(#waveGradient2)"
             paused={false}
@@ -348,7 +269,7 @@ const Hero = () => {
         </WaveWrapper>
         
         {/* Primera onda - más grande y más transparente (arriba) */}
-        <WaveWrapper position={30} opacity={0.25}>
+        <WaveWrapper $position={30} $opacity={0.25}>
           <Wave 
             fill="url(#waveGradient1)"
             paused={false}
