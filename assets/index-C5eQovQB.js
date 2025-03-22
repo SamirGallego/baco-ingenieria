@@ -1058,7 +1058,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   
   @media (max-width: 992px) {
     width: 70%;
-    top: -5em;
+    top: -7em;
     margin-bottom: 50px;
   }
   
